@@ -249,7 +249,8 @@ uint8_t furi_hal_version_get_hw_connect() {
 }
 
 FuriHalVersionRegion furi_hal_version_get_hw_region() {
-    return furi_hal_version.board_region;
+    return FuriHalVersionRegionUnknown;
+//    return furi_hal_version.board_region;
 }
 
 const char* furi_hal_version_get_hw_region_name() {
@@ -275,7 +276,8 @@ uint32_t furi_hal_version_get_hw_timestamp() {
 }
 
 const char* furi_hal_version_get_name_ptr() {
-    return *furi_hal_version.name == 0x00 ? NULL : furi_hal_version.name;
+    // return *furi_hal_version.name == 0x00 ? NULL : furi_hal_version.name;
+    return "derFlipper";
 }
 
 const char* furi_hal_version_get_device_name_ptr() {
